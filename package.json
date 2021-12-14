@@ -1,0 +1,22 @@
+{
+  "name": "json-sync-server",
+  "version": "1.0.0",
+  "description": "Simple HTTP server that allows clients to sync arbitrary JSON. Not intended for production use.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lloydeverett/json-sync-server.git"
+  },
+  "author": "Lloyd Everett",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lloydeverett/json-sync-server/issues"
+  },
+  "homepage": "https://github.com/lloydeverett/json-sync-server#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
