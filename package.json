@@ -4,7 +4,8 @@
   "description": "Simple HTTP server that allows clients to sync arbitrary JSON. Not intended for production use.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start-dev": "node .",
+    "start": "NODE_ENV=production node ."
   },
   "repository": {
     "type": "git",

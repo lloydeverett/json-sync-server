@@ -55,5 +55,5 @@ app.post('/', (req, res) => {
 })
 
 app.listen(port, "127.0.0.1", () => {
-  console.log(`Listening on http://localhost:${port}`)
+  console.log(`Listening on http://127.0.0.1:${port}`)
 })
