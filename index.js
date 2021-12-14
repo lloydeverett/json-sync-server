@@ -32,6 +32,19 @@ try {
   process.exit(1)
 }
 
+// Check authorisation for each request
+app.use(function (req, res, next) {
+  if (!req.header("X-Auth-Token")) {
+    res.status(401).send()
+    return
+  }
+  if (req.header("X-Auth-Token") !== token) {
+    res.status(403).send()
+    return
+  }
+  next()
+})
+
 app.use(express.json())
 
 app.get('/', (req, res) => {
@@ -41,7 +54,7 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
   object = req.body
-  res.end()
+  res.send()
 
   writeObjectPromise = (async () => {
     await writeObjectPromise
