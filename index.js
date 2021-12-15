@@ -56,15 +56,15 @@ app.post('/', (req, res) => {
   object = req.body
   res.send()
 
-  writeObjectPromise = (async () => {
-    await writeObjectPromise
+  writeObjectPromise = (async (previousPromise) => {
+    await previousPromise
     
     try {
       await fs.promises.writeFile(objectPath, JSON.stringify(req.body))
     } catch (err) {
       console.error(err)
     }
-  })()
+  })(writeObjectPromise)
 })
 
 app.listen(port, "127.0.0.1", () => {
